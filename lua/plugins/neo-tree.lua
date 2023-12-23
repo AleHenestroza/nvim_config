@@ -19,7 +19,7 @@ return {
         },
     },
     config = function()
-        vim.keymap.set('n', '<C-n>', ":Neotree reveal filesystem left toggle<CR>", {})
+        vim.keymap.set('n', '<leader>pt', ":Neotree reveal filesystem left toggle<CR>", {})
     end
 }
 
