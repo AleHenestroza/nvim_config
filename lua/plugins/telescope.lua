@@ -6,9 +6,8 @@ return {
         config = function()
             local builtin = require("telescope.builtin")
             -- Files / Buffers
-            vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+            vim.keymap.set('n', '<C-Space>', builtin.find_files, {})
             vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-            vim.keymap.set('n', '<leader>ffs', builtin.grep_string, {})
             vim.keymap.set('n', '<leader>fb', function()
                 builtin.buffers({
                     sort_mru = true,
