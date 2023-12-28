@@ -10,6 +10,7 @@ return {
         },
     },
     config = function()
+        vim.o.termguicolors = true
         vim.cmd.colorscheme "catppuccin-macchiato"
     end
 }
