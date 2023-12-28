@@ -11,7 +11,6 @@ return {
             vim.keymap.set('n', '<leader>fb', function()
                 builtin.buffers({
                     sort_mru = true,
-                    ignore_current_buffer = true,
                 })
             end)
             -- Git
