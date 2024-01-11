@@ -7,5 +7,4 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ga", "[[:!git add %:p<CR>]]", { noremap = true, silent = true })
 
 vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+vim.opt.signcolumn = "yes:1"
