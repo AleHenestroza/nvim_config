@@ -11,7 +11,6 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "tsserver",
                     "gopls",
                 },
             })
@@ -24,9 +23,6 @@ return {
             local lspconfig = require("lspconfig")
 
             lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.tsserver.setup({
                 capabilities = capabilities,
             })
             lspconfig.gopls.setup({
