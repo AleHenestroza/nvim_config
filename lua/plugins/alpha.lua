@@ -5,7 +5,7 @@ return {
     },
     config = function()
         local alpha = require("alpha")
-        local dashboard = require("alpha.themes.startify")
+        local dashboard = require("alpha.themes.dashboard")
 
         dashboard.section.header.val = {
             [[                                                                       ]],
@@ -26,12 +26,6 @@ return {
             [[                                                                       ]],
             [[                                                                       ]],
             [[                                                                       ]],
-        }
-
-        _Gopts = {
-            position = "center",
-            hl = "Type",
-            -- wrap = "overflow";
         }
 
         dashboard.opts.opts.noautocmd = true
