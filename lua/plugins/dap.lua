@@ -3,11 +3,16 @@ return {
 		"mfussenegger/nvim-dap",
 		config = function()
 			local dap = require("dap")
+			local sign = vim.fn.sign_define
 
 			vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, {})
 			vim.keymap.set("n", "<leader>dc", dap.continue, {})
 			vim.keymap.set("n", "<leader>dso", dap.step_over, {})
 			vim.keymap.set("n", "<leader>dsi", dap.step_into, {})
+
+			sign("DapBreakpoint", { text = "●", texthl = "DapBreakpoint", linehl = "", numhl = "" })
+			sign("DapBreakpointCondition", { text = "●", texthl = "DapBreakpointCondition", linehl = "", numhl = "" })
+			sign("DapLogPoint", { text = "◆", texthl = "DapLogPoint", linehl = "", numhl = "" })
 		end,
 	},
 	{
@@ -28,8 +33,8 @@ return {
 			"mfussenegger/nvim-dap",
 		},
 		config = function()
-			local dap, dapui = require('dap'), require("dapui")
-            dapui.setup()
+			local dap, dapui = require("dap"), require("dapui")
+			dapui.setup()
 
 			dap.listeners.before.attach.dapui_config = function()
 				dapui.open()
